@@ -1,13 +1,9 @@
 str = input()
 pots = 0
-for char in str:
-  if char == "B":
-    pots += 1
-  elif char == "C":
-    pots += 3
-  elif char == "D":
-    pots += 5
-  if char == "X":
-    pots -= 1
-  pots += 0.5
-print(pots)
+for point in range(0, len(str)-1, 2)
+    to_consider = str[point:point+2]
+    pots += to_consider.count("B")
+    pots += 3*to_consider.count("C")
+    pots += 5*to_consider.count("D")
+    if to_consider.count("x") == 0:
+        pots += 2
